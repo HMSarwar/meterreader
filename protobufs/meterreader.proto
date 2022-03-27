@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+
+message MeterReaderResponse {
+    string meterresponse = 1;
+}
+
+message MeterReaderRequest {
+    string start_time = 1;
+    string end_time = 2;
+}
+
+service MeterReader {
+    rpc ReadMeter (MeterReaderRequest) returns (MeterReaderResponse){}
+}
